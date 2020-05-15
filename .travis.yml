@@ -4,9 +4,8 @@ env:
   - JEKYLL_ENV=production
   - PLACE=za-wc033
 install:
-- mkdir build
+- git clone --depth 1 https://github.com/laws-africa/openbylaws-microsite.git build
 - cd build
-- git clone --depth 1 https://github.com/laws-africa/openbylaws-microsite.git
 - pip install -r requirements.txt
 - bundle install
 - python bin/place.py $PLACE
