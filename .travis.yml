@@ -1,0 +1,22 @@
+language: python
+env:
+  global:
+  - JEKYLL_ENV=production
+  - PLACE=za-wc033
+install:
+- mkdir build
+- cd build
+- git clone --depth 1 https://github.com/laws-africa/openbylaws-microsite.git
+- pip install -r requirements.txt
+- bundle install
+- python bin/place.py $PLACE
+script: bundle exec jekyll build --trace
+deploy:
+  provider: pages
+  local_dir: build/_site
+  target_branch: "gh-pages"
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  fqdn: capeagulhas.openbylaws.org.za
+  on:
+    branch: master
