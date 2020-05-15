@@ -3,6 +3,8 @@ env:
   global:
   - JEKYLL_ENV=production
   - PLACE=za-wc033
+  - secure: dXqW7QGG8/BFsB3BhA0knJgJ7LmkpGGnBvIrqC3elHRlBdepqoG8d8Lk2f0Nt0xC5eeuOOdgAq+BZi+8A3rMIG9mzfYuYE9ZS/X3pSwVbRxeJhsj8SBdvHvf8DXQi5vKKjtXfbjcBP+adAlNrBezs45Orea+YUNjVe8qoVY85pvvjK6a/FoMXQzZtjkgl/1skP5qfrgzdNosnGtf9EHbCiam6/7+1ALzPzIqU6PigP45MWhXcsxjlod7y1cQwD9RjAkRCHWE2Hf2UhWMzxgPKaZBuEB3r5EVCp81a65Fds1DPc5Eu4NidcgTOtpjk2twoWZpivtRup9mxwdDp5f2etZceXOoPSbtIM48QRuLQdorM1U2zY8W0iUy1hPqZ+UDe4MzT8/frsv2pAQXqJX7dAtg2cf7a6hBXNqBlwTtifCnnunjKK/LANOF+oGV6N9YDOz9mGFuFufr3213fUyEe2+MyeeguTL75LbfROEIgxB+aJUmwmGTNB/DZEcohrZBLkasypIr7SYYPhpGh8wRwHjPnaCFkSf84kdzUPvQ1Lh5C/Zjc9CwDbjHvwTzn5/ijEYunxbcsKCzTyWtfejwHNhwPM0FORKXlkOLz5mRlbcpSAegPPgnome4s9lNFRUFYEtiKogGuZvpb4k5tomgjjM9u/XQvvMx2FHxd26DOck=
+  - secure: LOLyxoKQH82Diw5BdWCi5nCrNEwQWWV+tumCl54gMxFDDkFkBNbnL2DsfUZglsxNX4L2n8WrDd7xxwFbryB/14s4oGHU9qWzj/0/hCfCReibOckMjtjdwcPPEL91B+ymf0khqTr/vs9K+yihRgr+5gzT+QW9IRYtS8HGsc1x1PI3tDHv1VMjZBkC53Gb+FGQMqXaHUl/CY2BPkNK2RCCev/yesGh9CXVUEjnlO6iJGekeZAhG2SYlwjNat3d5O7qt57LwLjC4+fFDHfVXCJrBoZaYMYm7nsgNmVScu2WRbAIkhFkHIbp4RP8p08drP+QDYIlTrR63wHYSeym7Dx5ObKjDqzeh6VnNaZUf5o7wCdMYVP19PC7P+JpDsFp1kFD2IRN1kSfCS8/UED33lIgd8Hccez9QDi9Ox/fJ8lDWRhem9wb9D5E8ztHGpoI6/lxhAmiNKTlZj7nJFzg/tvp5sidvtGmnklP7NLbMs5KqwuBZ1jmcb2YgxKzfO5hQkQCGXS3ny8EtxlD+jm0ROZFBWZhvZ2mP6ZFcKQgY0Fmsl41EJwbpfAZxVBph1jSMtWrR9NMxmRWRgS5Ss1c3T9kzpRf6qEAoVXW08lnW2zFqIJVAIIWAz1Uc84eCrUfbh4y9k5EHcWxFz+/IZbpHXliotSNag5VZEz/p/+eI0qPkdE=
 install:
 - git clone --depth 1 https://github.com/laws-africa/openbylaws-microsite.git build
 - cd build
@@ -13,7 +15,7 @@ script: bundle exec jekyll build --trace
 deploy:
   provider: pages
   local_dir: build/_site
-  target_branch: "gh-pages"
+  target_branch: gh-pages
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
   fqdn: capeagulhas.openbylaws.org.za
