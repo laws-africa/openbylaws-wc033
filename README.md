@@ -1,5 +1,7 @@
 # Open By-laws microsite
 
+[![Build Status](https://travis-ci.com/laws-africa/openbylaws-wc033.svg?branch=master)](http://travis-ci.com/laws-africa/openbylaws-wc033)
+
 This is an openbylaws.org.za microsite.
 
 The only thing it does is run the build process from the [openbylaws.org.za's microsite repo](https://github.com/laws-africa/openbylaws.org.za),
