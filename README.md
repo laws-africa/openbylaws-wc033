@@ -4,7 +4,7 @@
 
 This is an openbylaws.org.za microsite.
 
-The only thing it does is run the build process from the [openbylaws.org.za's microsite repo](https://github.com/laws-africa/openbylaws.org.za),
+The only thing it does is run the build process from the [openbylaws.org.za's microsite repo](https://github.com/laws-africa/openbylaws-microsite),
 configured for za-wc033. The results are force-pushed to this repo's gh-pages branch, and deployed as a GitHub pages website.
 
 See [.travis.yml](.travis.yml) for the details.
